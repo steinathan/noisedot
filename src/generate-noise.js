@@ -1,3 +1,9 @@
+/**
+ * @author Navicstein Rotciv <https://gitlab.com/navicstein/noise>
+ * @description Noise is a library that makes it easy to add `noise texture` to your web apps
+ * @returns {void}
+ */
+
 // Main function to generate `canvased` pngs
 export default options => {
   let canvas, context, w, h;

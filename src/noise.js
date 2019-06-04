@@ -1,9 +1,3 @@
-/**
- * @author Navicstein Rotciv <https://gitlab.com/navicstein/noise>
- * @description Noise is a library that makes it easy to add `noise texture` to your web apps
- * @returns {void}
- */
-
 "use strict";
 // import libs
 import genNoise from "./generate-noise";
