@@ -1,7 +1,9 @@
 {
   "name": "noisedot",
   "version": "1.0.0",
+  "main": "index.js",
   "browser": "dist/noisedot.umd.js",
+  "module": "dist/noisedot.esm.js",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -15,11 +17,14 @@
     "jest": "24.8.0",
     "pnpm": "^3.4.1",
     "rollup": "1.12.3",
-    "rollup-plugin-babel": "4.3.2"
+    "rollup-plugin-babel": "4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.1"
   },
   "keywords": [
     "noisedot",
-    "noisedot background",
+    "noise",
+    "noise background",
     "javascript"
   ],
   "bugs": {

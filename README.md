@@ -1,6 +1,6 @@
 # noisedot
 
-> noisedot is a library that makes it easy to add `noisedot texture` to your web apps
+> noisedot is a library that makes it easy to add `noise texture` to your web apps
 
 With `noisedot` you can customize noisedot effects on your webpage, it has customizable options that makes it easy to generate noisedot effect on your site, the main noisedot is just css3 key-frame animation and many noisedot pngs
 
@@ -8,24 +8,13 @@ With `noisedot` you can customize noisedot effects on your webpage, it has custo
 
 ## Installation
 
-noisedot is made with [`pnpm`](https://github.com/pnpm/pnpm/)
-so you can give it a try
-
-```sh
-# with pnpm
-$ pnpm i noisedot --save
+```html
+<script src="https://unpkg.com/noisedot@1.0.0/dist/noisedot.umd"></script>
 ```
 
-Alternatively
+## Starting noisedot
 
-```sh
-# with npm
-$ npm i noisedot --save
-```
-
-## Initialze noisedot
-
-In your script or html
+In your script path or html
 
 ```js
 noisedot(element [, options])
@@ -40,28 +29,28 @@ Where element is your html selector entity eg `#noisedot` or `.noisedot`
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Example noisedot | example.com</title>
-  <script src="/path/to/noisedot.umd.js"/></script>
-</head>
-<body id="noisedot">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Example noisedot | example.com</title>
+    <script src="https://unpkg.com/noisedot@1.0.0/dist/noisedot.umd"></script>
+  </head>
+  <body id="noisedot">
     <div id="main">
-       <h3>Hello World</h3>
-       <a href="//gitlab.com/navicstein">This is a reactive link</a>
+      <h3>Hello World</h3>
+      <a href="//gitlab.com/navicstein">This is a reactive link</a>
     </div>
 
     <style>
-    .container {
+      .container {
         position: absoulte;
-        z-index: 100 !important
-    }
+        z-index: 100 !important;
+      }
     </style>
     <!-- initialize noisedot here -->
     <script>
-          noisedot("#noisedot", {
+      noisedot("#noisedot", {
         animate: true,
         patternWidth: 100,
         patternHeight: 100,
@@ -72,10 +61,9 @@ Where element is your html selector entity eg `#noisedot` or `.noisedot`
         grainChaos: 0.5,
         grainSpeed: 20,
       });
-</script>
-</body>
+    </script>
+  </body>
 </html>
-
 ```
 
 ## Things to note
