@@ -1,0 +1,21 @@
+<html>
+  <body style="background:black;color:white">
+    <script src="../dist/noise.umd.js"></script>
+    <div id="noiser" style="padding:100px">
+      <h3>Hello World</h3>
+    </div>
+    <script>
+      noise("#noiser", {
+        animate: true,
+        patternWidth: 100,
+        patternHeight: 100,
+        grainOpacity: 0.1,
+        grainDensity: 1,
+        grainWidth: 1,
+        grainHeight: 1,
+        grainChaos: 0.5,
+        grainSpeed: 20,
+      });
+    </script>
+  </body>
+</html>

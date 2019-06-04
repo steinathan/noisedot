@@ -1,0 +1,45 @@
+{
+  "name": "noise",
+  "version": "1.0.1",
+  "main": "dist/noise.cjs.js",
+  "module": "dist/noise.esm.js",
+  "browser": "dist/noise.umd.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/navicstein/noise"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.4",
+    "@babel/preset-env": "7.4.4",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "24.8.0",
+    "concurrently": "4.1.0",
+    "jest": "24.8.0",
+    "rollup": "1.12.3",
+    "rollup-plugin-babel": "4.3.2",
+    "rollup-plugin-commonjs": "10.0.0",
+    "rollup-plugin-node-resolve": "5.0.0",
+    "serve": "11.0.0"
+  },
+  "scripts": {
+    "prepare": "pnpm run build",
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w",
+    "watch": "concurrently 'pnpm run build:watch' 'pnpm run serve -l tcp://127.0.0.1'",
+    "test": "jest && pnpm run build"
+  },
+  "renovate": {
+    "extends": [
+      "config:js-lib"
+    ],
+    "automerge": true,
+    "major": {
+      "automerge": false
+    },
+    "automergeType": "branch"
+  },
+  "files": [
+    "dist"
+  ]
+}
