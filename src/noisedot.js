@@ -1,13 +1,13 @@
 "use strict";
 // import libs
-import genNoise from "./generate-noise";
+import gennoisedot from "./generate-noisedot";
 import addCssRule from "./add-css-rule";
 
-export default function noise(el, opts) {
+export default function noisedot(el, opts) {
   el = document.querySelector(el);
   if (!el || typeof el === "undefined") {
     console.error(
-      `[Noise] Can't mount noise at: "${el}", noise will end here.. `
+      `[noisedot] Can't mount noisedot at: "${el}", noisedot will end here.. `
     );
     return;
   }
@@ -32,8 +32,8 @@ export default function noise(el, opts) {
     grainChaos: 0.5,
     grainSpeed: 20,
   };
-  // hold our noise var passing the options
-  let noise = genNoise(opts);
+  // hold our noisedot var passing the options
+  let noisedot = gennoisedot(opts);
 
   let animation = "",
     keyFrames = [
@@ -52,7 +52,7 @@ export default function noise(el, opts) {
 
   var pre = prefixes.length;
   while (pre--) {
-    animation += `@${prefixes[pre]}keyframes noise{`;
+    animation += `@${prefixes[pre]}keyframes noisedot{`;
     for (let key = 0; key < keyFrames.length; key++) {
       let keyVal = keyFrames[key].split(":");
       animation += `${keyVal[0]} {`;
@@ -63,25 +63,25 @@ export default function noise(el, opts) {
   }
 
   //add animation keyframe
-  let animationAdded = document.getElementById("noise-animation");
+  let animationAdded = document.getElementById("noisedot-animation");
   if (animationAdded) {
     animationAdded.parentElement.removeChild(animationAdded);
   }
   let style = document.createElement("style");
   style.type = "text/css";
-  style.id = `noise-animation-${el.id}`;
+  style.id = `noisedot-animation-${el.id}`;
   style.innerHTML = animation;
   document.body.appendChild(style);
 
   //add custimozed style
-  let rule = `background: url(${noise});`;
+  let rule = `background: url(${noisedot});`;
   rule += `position: absolute; content:""; height: 300%; width: 300%; left: -100%; top: -100%;`;
   pre = prefixes.length;
   // if the options.animate is true
   if (opts.animate) {
     // add animation frames to loop over the generated pngs
     while (pre--) {
-      rule += `${prefixes[pre]} animation-name: noise;`;
+      rule += `${prefixes[pre]} animation-name: noisedot;`;
       rule += `${prefixes[pre]} animation-iteration-count: infinite;`;
       rule += `${prefixes[pre]} animation-duration: ${opts.grainChaos}s;`;
       rule += `${prefixes[pre]} animation-timing-function: steps(${

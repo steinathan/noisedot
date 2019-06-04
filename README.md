@@ -1,37 +1,37 @@
-# Noise
+# noisedot
 
-> Noise is a library that makes it easy to add `noise texture` to your web apps
+> noisedot is a library that makes it easy to add `noisedot texture` to your web apps
 
-With `noise` you can customize noise effects on your webpage, it has customizable options that makes it easy to generate noise effect on your site, the main noise is just css3 key-frame animation and many noise pngs
+With `noisedot` you can customize noisedot effects on your webpage, it has customizable options that makes it easy to generate noisedot effect on your site, the main noisedot is just css3 key-frame animation and many noisedot pngs
 
 > TIP => You can also mix this script along side with typed.js to create a very fancyfull webpage, please check the `/dev/index.html` for relative examples
 
 ## Installation
 
-Noise is made with [`pnpm`](https://github.com/pnpm/pnpm/)
+noisedot is made with [`pnpm`](https://github.com/pnpm/pnpm/)
 so you can give it a try
 
 ```sh
 # with pnpm
-$ pnpm i noise --save
+$ pnpm i noisedot --save
 ```
 
 Alternatively
 
 ```sh
 # with npm
-$ npm i noise --save
+$ npm i noisedot --save
 ```
 
-## Initialze Noise
+## Initialze noisedot
 
 In your script or html
 
 ```js
-noise(element [, options])
+noisedot(element [, options])
 ```
 
-Where element is your html selector entity eg `#noise` or `.noise`
+Where element is your html selector entity eg `#noisedot` or `.noisedot`
 
 ### Example
 
@@ -44,10 +44,10 @@ Where element is your html selector entity eg `#noise` or `.noise`
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Example Noise | example.com</title>
-  <script src="/path/to/noise.umd.js"/></script>
+  <title>Example noisedot | example.com</title>
+  <script src="/path/to/noisedot.umd.js"/></script>
 </head>
-<body id="noise">
+<body id="noisedot">
     <div id="main">
        <h3>Hello World</h3>
        <a href="//gitlab.com/navicstein">This is a reactive link</a>
@@ -59,9 +59,9 @@ Where element is your html selector entity eg `#noise` or `.noise`
         z-index: 100 !important
     }
     </style>
-    <!-- initialize noise here -->
+    <!-- initialize noisedot here -->
     <script>
-          noise("#noise", {
+          noisedot("#noisedot", {
         animate: true,
         patternWidth: 100,
         patternHeight: 100,

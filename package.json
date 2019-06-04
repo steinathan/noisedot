@@ -1,11 +1,11 @@
 {
-  "name": "noise",
+  "name": "noisedot",
   "version": "1.0.0",
-  "browser": "dist/noise.umd.js",
+  "browser": "dist/noisedot.umd.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/navicstein/noise"
+    "url": "https://github.com/navicstein/noisedot"
   },
   "devDependencies": {
     "@babel/core": "7.4.4",
@@ -18,12 +18,12 @@
     "rollup-plugin-babel": "4.3.2"
   },
   "keywords": [
-    "noise",
-    "noise background",
+    "noisedot",
+    "noisedot background",
     "javascript"
   ],
   "bugs": {
-    "url": "https://github.com/navicstein/noise/issues"
+    "url": "https://github.com/navicstein/noisedot/issues"
   },
   "scripts": {
     "prepare": "pnpm run build",

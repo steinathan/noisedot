@@ -1,6 +1,6 @@
 /**
- * @author Navicstein Rotciv <https://gitlab.com/navicstein/noise>
- * @description Noise is a library that makes it easy to add `noise texture` to your web apps
+ * @author Navicstein Rotciv <https://gitlab.com/navicstein/noisedot>
+ * @description noisedot is a library that makes it easy to add `noisedot texture` to your web apps
  * @returns {void}
  */
 
