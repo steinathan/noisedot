@@ -1,20 +1,32 @@
+/**
+ * @author Navicstein Rotciv <https://gitlab.com/navicstein/noise>
+ * @description Noise is a library that makes it easy to add `noise texture` to your web apps
+ * @returns {void}
+ */
+
 "use strict";
+// import libs
 import genNoise from "./generate-noise";
 import addCssRule from "./add-css-rule";
 
 export default function noise(el, opts) {
   el = document.querySelector(el);
   if (!el || typeof el === "undefined") {
-    console.error("Oops");
+    console.error(
+      `[Noise] Can't mount noise at: "${el}", noise will end here.. `
+    );
+    return;
   }
   //set style for parent element
   if (el.style.position !== "absolute") {
     el.style.position = "relative";
+    el.style.zIndex = "-1";
   }
   el.style.overflow = "hidden";
+
   let prefixes = Array("", "-moz-", "-o-animation-", "-webkit-", "-ms-");
 
-  // Default options in case none was given
+  // Default options in case none was provided
   opts = opts || {
     animate: true,
     patternWidth: 100,
@@ -29,7 +41,7 @@ export default function noise(el, opts) {
   // hold our noise var passing the options
   let noise = genNoise(opts);
 
-  var animation = "",
+  let animation = "",
     keyFrames = [
       "0%:-10%,10%",
       "10%:-25%,0%",
@@ -83,7 +95,8 @@ export default function noise(el, opts) {
       }, end);`;
     }
   }
+
   let selectorElement = "#" + el.id + "::before";
   addCssRule(style.sheet, selectorElement, rule);
-  return true;
+  /** May the source-map be with you! **/
 }

@@ -1,15 +1,29 @@
 <html>
-  <body style="background:black;color:white">
+  <body  id="noise"  style="background:black;color:white">
     <script src="../dist/noise.umd.js"></script>
-    <div id="noiser" style="padding:100px">
-      <h3>Hello World</h3>
+    <div id="main">
+        <h1>Hello #Noise</h1>
+        This page is mounted on noise<br/>
+        <a href="//github.com/navicstein/noise">Github</a> <br/>
+        <a href="//gitlab.con/navicstein/noise">Gitlab link</a>
+      </div>    
     </div>
+    <style>
+      #main{
+        position: absolute;
+        z-index: 100;
+      }
+      #noise {
+        position: absolute;
+        padding: 200px;
+      }
+    </style>
     <script>
-      noise("#noiser", {
+      noise("#noise", {
         animate: true,
         patternWidth: 100,
         patternHeight: 100,
-        grainOpacity: 0.1,
+        grainOpacity: 0.5,
         grainDensity: 1,
         grainWidth: 1,
         grainHeight: 1,

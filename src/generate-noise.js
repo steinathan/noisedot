@@ -1,4 +1,4 @@
-// Main function to generate canvased pngs
+// Main function to generate `canvased` pngs
 export default options => {
   let canvas, context, w, h;
   canvas = document.createElement("canvas");
