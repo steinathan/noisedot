@@ -15,7 +15,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.8.0",
     "jest": "24.8.0",
-    "pnpm": "^3.4.1",
+    "pnpm": "^7.33.4",
     "rollup": "1.12.3",
     "rollup-plugin-babel": "4.3.2",
     "rollup-plugin-commonjs": "^10.0.0",
